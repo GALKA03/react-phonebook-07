@@ -19,11 +19,11 @@ export function App() {
     setIsListShown(true);
     dispatch(fetchContacts());
   };
-  const isError = () => {
-    if (error) {
-    return alert('ERROR')
-  }
-}
+  // const isError = () => {
+  //   if (error) {
+  //   return alert('ERROR')
+  // }
+//}
   return (
     <Conteiner>
       <div>
@@ -49,7 +49,7 @@ export function App() {
       </h2>
       <Filter />
       {isLoading && <Loader/>}
-        {showUsersList && <Contacts showUsersList={showUsersList} />}
+        {!isListShown && <Contacts showUsersList={showUsersList} />}
         {error && <p>{error.massage}</p>}
       </div>
     </Conteiner>

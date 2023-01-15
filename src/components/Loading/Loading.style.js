@@ -2,7 +2,7 @@
 
 export const Container = styled.div`
 position:absolute;
-top:0;
+top:20;
 right:50%; 
 z-index:1000;
     display: block;
