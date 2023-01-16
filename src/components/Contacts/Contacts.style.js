@@ -7,6 +7,7 @@ padding-top:30px;
 `
 export const Item = styled.li`
 display:flex;
+flex-wrap:wrap;
 justify-content:space-between;
 align-items:center;
 height:auto;

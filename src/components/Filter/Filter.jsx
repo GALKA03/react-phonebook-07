@@ -10,7 +10,7 @@ export const Filter = () => {
   
     return (
          <Label>{''}
-        Find contacts by name
+        Find contacts by name<br/>
           <Input  type="text"
             onChange={(e)=>dispatch(addFilter(e.target.value))} 
             name="filter"
