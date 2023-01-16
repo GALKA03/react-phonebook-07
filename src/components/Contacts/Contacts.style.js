@@ -3,7 +3,7 @@ export const ContactsConteiner = styled.ul`
 position: relative;
 background-color:transparent;
 color:black;
-padding-top:30px;
+
 `
 export const Item = styled.li`
 display:flex;
@@ -46,5 +46,4 @@ margin-right:20px;
 export const Img = styled.img`
 width:40px;
 height:40px;
-margin-right:15px;
 ` 

@@ -2,7 +2,7 @@ import { Conteiner } from './App.styles';
 import { Filter } from './Filter/Filter';
 import Form from './Form/Form';
 import { Contacts } from './Contacts/Contacts';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/contacts-operations';
 import { selectIsLoading, selectError } from 'redux/contacts/contactsSelector';
@@ -10,6 +10,7 @@ import { Loader } from './Loading/Loader';
 
 export function App() {
   const [isListShown, setIsListShown] = useState(false);
+  const [contacts, useContacts] = useState([])
   const dispatch = useDispatch();
    const isLoading = useSelector(selectIsLoading)
   const error = useSelector(selectError)
@@ -17,13 +18,22 @@ export function App() {
 
   const showUsersList = () => {
     setIsListShown(true);
-    dispatch(fetchContacts());
+    
   };
   // const isError = () => {
   //   if (error) {
   //   return alert('ERROR')
   // }
 //}
+
+useEffect(() => {
+        dispatch(fetchContacts())
+    }, [dispatch])
+// const =useParams()
+//     useEffect(() => {
+//         fetchMoviesById(moviesId).then(setMovies)
+//     }, [moviesId])
+//     return movies;
   return (
     <Conteiner>
       <div>
@@ -49,7 +59,7 @@ export function App() {
       </h2>
       <Filter />
       {isLoading && <Loader/>}
-        {!isListShown && <Contacts showUsersList={showUsersList} />}
+        {!isListShown &&   <Contacts showUsersList={showUsersList} />}
         {error && <p>{error.massage}</p>}
       </div>
     </Conteiner>

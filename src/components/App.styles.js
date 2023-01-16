@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 export const Conteiner = styled.div`
 display: flex;
-flex-wrap:wrap;
+/* flex-wrap:wrap; */
 flex-grow:1;
   margin-left: auto;
   margin-right: auto;
@@ -9,7 +9,7 @@ flex-grow:1;
   max-width: 40%;
   padding:10px;
   align-items: flex-start;
-  justify-content:space-between;
+  justify-content:space-around;
   font-size: 20px;
   background-color: antiquewhite;
   color: #010101;
