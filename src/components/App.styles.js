@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 export const Conteiner = styled.div`
 display: flex;
+flex-wrap:wrap;
+flex-grow:1;
   margin-left: auto;
   margin-right: auto;
   height: 100%;
