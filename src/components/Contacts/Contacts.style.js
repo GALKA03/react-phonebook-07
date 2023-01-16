@@ -8,11 +8,11 @@ color:black;
 export const Item = styled.li`
 display:flex;
 flex-wrap:wrap;
-justify-content:space-between;
+justify-content:start;
 align-items:center;
 height:auto;
 list-style: none;
-word-spacing:10px;
+//word-spacing:10px;
 
 `
 export const Btn = styled.button`

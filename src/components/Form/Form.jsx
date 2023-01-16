@@ -40,7 +40,7 @@ export default function Form() {
 		);  console.log('findContact',findContact)
 		findContact
 			? Notiflix.Notify.failure(`${contactsObj.name} is already in contact`)
-      : dispatch(addContact({ name, number,id: nanoid() }));
+      : dispatch(addContact({ name, number }));
     
    setName('');
       setNumber('');
