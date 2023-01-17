@@ -20,20 +20,11 @@ export function App() {
     setIsListShown(true);
     
   };
-  // const isError = () => {
-  //   if (error) {
-  //   return alert('ERROR')
-  // }
-//}
 
 useEffect(() => {
         dispatch(fetchContacts())
     }, [dispatch])
-// const =useParams()
-//     useEffect(() => {
-//         fetchMoviesById(moviesId).then(setMovies)
-//     }, [moviesId])
-//     return movies;
+
   return (
     <Conteiner>
       <div>
