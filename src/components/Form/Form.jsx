@@ -39,7 +39,7 @@ export default function Form() {
       Notiflix.Notify.warning('Please enter all fields!');
       return 
     }
-    if (contacts.find(contact => contact.name === name)) {
+    if (contacts.find(contactsObj => contactsObj.name === name)) {
     Notiflix.Notify.failure(`${name} is already in contacts`);
       return;
     }
