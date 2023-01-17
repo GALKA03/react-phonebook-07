@@ -59,7 +59,7 @@ useEffect(() => {
       </h2>
       <Filter />
       {isLoading && <Loader/>}
-        {!isListShown &&   <Contacts showUsersList={showUsersList} />}
+       <Contacts showUsersList={showUsersList} />
         {error && <p>{error.massage}</p>}
       </div>
     </Conteiner>
