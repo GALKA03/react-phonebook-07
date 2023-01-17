@@ -35,14 +35,21 @@ export default function Form() {
     const findContact = contacts.find(contact =>
       contact.name.toLowerCase().includes(contactsObj.name.toLowerCase())
     );
+    if (!contactsObj) {
+      Notiflix.Notify.warning('Please enter all fields!');
+      return 
+    }
     if (contacts.find(contact => contact.name === name)) {
     Notiflix.Notify.failure(`${name} is already in contacts`);
       return;
     }
+    else {
+      dispatch(addContact({ name, number }));
+    }
     console.log('findContact', findContact);
-    findContact
-      ? Notiflix.Notify.failure(`${contactsObj.name} is already in contact`)
-      : dispatch(addContact({ name, number }));
+    // findContact
+    //   ? Notiflix.Notify.failure(`${contactsObj.name} is already in contact`)
+    //   : dispatch(addContact({ name, number }));
 
     setName('');
     setNumber('');
